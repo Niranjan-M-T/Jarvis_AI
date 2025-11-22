@@ -1,0 +1,32 @@
+wake_word:
+  engine: "porcupine"
+  keywords: ["jarvis"]
+  access_key: "${PICOVOICE_ACCESS_KEY}" # Environment variable or fill in
+  sensitivity: 0.5
+
+stt:
+  model: "tiny"
+  engine: "whisper_cpp" # or "whisper" for python package
+  model_path: "models/ggml-tiny.bin"
+
+llm:
+  model_path: "models/Phi-3-mini-4k-instruct.gguf" # Path to your GGUF model
+  context_size: 2048
+  n_threads: 4
+
+tts:
+  engine: "pyttsx3"
+  rate: 150
+  volume: 1.0
+
+recording:
+  duration: 5 # Default duration if not using VAD
+  sample_rate: 16000
+  channels: 1
+
+system:
+  allowed_commands:
+    - "open_application"
+    - "system_control"
+    - "get_system_stats"
+    - "search_web"
