@@ -1,0 +1,10 @@
+pvporcupine
+sounddevice
+numpy
+pyttsx3
+psutil
+pyyaml
+openai-whisper
+requests
+# For LLM, depending on the implementation:
+llama-cpp-python
